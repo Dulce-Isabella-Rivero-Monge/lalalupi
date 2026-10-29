@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffd3e6">
+    <meta name="description" content="Administración de muñecas, personas, clientes, vendedores y facturas de la tienda Lalaloopsy.">
+    <title>Tienda Lalaloopsy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <span class="sparkle s1" aria-hidden="true">✿</span>
+      <span class="sparkle s2" aria-hidden="true">♡</span>
+      <span class="sparkle s3" aria-hidden="true">✧</span>
+      <span class="sparkle s4" aria-hidden="true">❀</span>
+      <div class="hero-inner">
+        <div class="button-mark" aria-hidden="true"></div>
+        <div>
+          <h1>Tienda Lalaloopsy</h1>
+          <p class="subtitle">Muñecas, clientes, vendedores y facturas, todo cosido en un solo lugar.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <nav id="tabs" class="tabs" aria-label="Secciones"></nav>
+
+      <div class="layout">
+        <aside class="panel form-panel" aria-labelledby="form-title">
+          <h2 id="form-title">Nueva muñeca</h2>
+          <form id="form" class="record-form" novalidate></form>
+          <p id="message" class="message" role="status" aria-live="polite"></p>
+        </aside>
+
+        <section class="panel list-panel" aria-labelledby="title">
+          <div class="list-head">
+            <h2 id="title">Muñecas</h2>
+            <span id="count" class="count" aria-live="polite"></span>
+          </div>
+          <div class="toolbar">
+            <label class="search">
+              <span class="visually-hidden">Buscar</span>
+              <input id="search" type="search" placeholder="Buscar…" autocomplete="off">
+            </label>
+            <div id="chips" class="chips" role="group" aria-label="Filtrar por tipo"></div>
+          </div>
+
+          <p id="empty" class="empty-state" hidden></p>
+          <div id="grid" class="doll-grid" hidden></div>
+          <div id="table-wrap" class="table-wrap" hidden>
+            <table>
+              <thead id="head"></thead>
+              <tbody id="body"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <footer>Hecho con <span aria-label="amor">♥</span> para coleccionar sonrisas.</footer>
+    </main>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
